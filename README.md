@@ -191,3 +191,49 @@ For custom projects, enterprise solutions, or to initiate a partnership:
 
 - **Research & Blogs:** Access articles and insights into the latest in AI and hardware engineering.
 - **Whitepapers:** Download detailed documents on the platform's methodologies and technologies.
+
+---
+
+## Digital Twin Hackable IDE
+
+This repository provides a **hackable Digital Twin IDE** built using a **Flask backend** and an **HTML + CesiumJS frontend**.  
+It is designed as a flexible starting point for experimenting with **digital twins**, including simulations of **physics systems, sensors, electronics, and intelligent behaviors**.
+
+The goal of this project is not to deliver a single fixed simulation, but to provide a **clear, extensible structure** that developers can understand, modify, and build upon.
+
+---
+
+## System Overview
+
+The Digital Twin system is composed of two main layers:
+
+### Backend (Flask)
+- Hosts the web server
+- Serves HTML templates
+- Manages routing and backend logic
+- Provides optional API endpoints (e.g. AI queries, sensor discovery)
+- Passes configuration values (such as Cesium ion tokens) to the frontend
+
+### Frontend (HTML + CesiumJS)
+- Renders the Digital Twin visualization
+- Displays 3D environments and assets
+- Loads sensor and simulation scripts
+- Acts as the main user interaction layer
+
+Flask follows the standard project structure, where HTML pages are stored inside the `templates/` directory and static assets are served from `static/`.
+
+---
+
+## Project Structure
+
+Key files and folders:
+
+```text
+Server_Host.py          # Main Flask server entry point
+templates/
+  └── digital_twin.html # Main Digital Twin HTML page
+static/
+  └── js/
+      └── sensors/      # Sensor JavaScript modules (optional)
+3d_objects/             # 3D models and assets (served via Flask)
+physics/                # Physics or simulation-related files (optional)
